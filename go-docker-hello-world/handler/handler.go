@@ -7,6 +7,6 @@ import (
 
 // GetGreetingsHandler sends greetings
 func GetGreetingsHandler(w http.ResponseWriter, r *http.Request) {
-	//w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "application/json")
 	fmt.Fprintf(w, string("{ text: 'Greetings from docker container'}"))
 }

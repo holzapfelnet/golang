@@ -1,6 +1,6 @@
 # Go Docker Hello World
 
-Rest API in Golang with Docker 
+Rest API in Go using Docker 
 
 
 ## Prerequisites
@@ -22,6 +22,8 @@ go test ./...
 docker build -t go-docker-test .
 
 docker run -d --name go-docker-container -p 8080:8080 go-docker-test
+
+curl -i localhost:8080/greet
 
 ## Links
 

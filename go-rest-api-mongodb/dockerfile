@@ -1,0 +1,8 @@
+FROM golang:latest 
+
+RUN mkdir /app 
+ADD . /app/ 
+WORKDIR /app 
+RUN go get go.mongodb.org/mongo-driver/mongo
+RUN go build -o main . 
+CMD ["/app/main"]

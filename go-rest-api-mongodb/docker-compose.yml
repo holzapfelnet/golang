@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "8081:8081"
+    links:
+    - mongodb
+    environment:
+    - MONGO_HOST=mongodb
+    - MONGO_PORT=27017
+  mongodb:
+    image: mongo
+    ports:
+        - "27017:27017"
